@@ -2,6 +2,10 @@ const Contact = require("../models/contactModel");
 const multer = require('multer')
 const { v4: uuid } = require('uuid');
 
+exports.instructions = (req,res)=>{
+    res.sendFile('index.html')
+}
+
 exports.create = async (req, res) => {
     try {
         const numberArray = req.body.number.split(',')
