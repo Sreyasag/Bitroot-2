@@ -6,7 +6,7 @@ const router = express.Router();
 router.post('/',contactsController.upload.single('photo'), contactsController.create);
 router.delete('/:id', contactsController.delete);
 router.put('/:id', contactsController.update);
-router.get('/', contactsController.getAllContacts);
+router.get('/allContacts', contactsController.getAllContacts);
 router.get('/search', contactsController.search);
 
 
